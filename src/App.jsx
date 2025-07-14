@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const API_URL = 'http://localhost:3001';
+const API_URL = 'https://bank-server-mzfl.onrender.com';
 
 
 function App() {
