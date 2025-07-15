@@ -92,26 +92,26 @@ export const Filters = ({
             </div>
           </div>
           
-          <div className="md:col-span-1 flex flex-col items-start md:items-end justify-end h-full mt-6 md:mt-0">
-            <div className="flex space-x-6 text-right">
-                <div>
-                    <p className="text-sm text-gray-500">À Traiter</p>
-                    <p className="text-3xl font-light text-orange-500">
-                        {new Intl.NumberFormat('fr-FR').format(counts.toProcess)}
-                    </p>
-                </div>
-                <div>
-                    <p className="text-sm text-gray-500">Traitées</p>
-                    <p className="text-3xl font-light text-green-500">
-                        {new Intl.NumberFormat('fr-FR').format(counts.processed)}
-                    </p>
-                </div>
-                 <div>
-                    <p className="text-sm text-gray-500">Total</p>
-                    <p className="text-3xl font-light text-slate-800">
-                        {new Intl.NumberFormat('fr-FR').format(counts.total)}
-                    </p>
-                </div>
+          <div className="md:col-span-1 flex flex-col w-full mt-6 md:mt-0">
+            <div className="grid grid-cols-3 sm:flex sm:space-x-6 justify-between sm:justify-end">
+              <div className="text-center sm:text-right">
+                <p className="text-xs sm:text-sm text-gray-500">À Traiter</p>
+                <p className="text-xl sm:text-3xl font-light text-orange-500">
+                  {new Intl.NumberFormat('fr-FR').format(counts.toProcess)}
+                </p>
+              </div>
+              <div className="text-center sm:text-right">
+                <p className="text-xs sm:text-sm text-gray-500">Traitées</p>
+                <p className="text-xl sm:text-3xl font-light text-green-500">
+                  {new Intl.NumberFormat('fr-FR').format(counts.processed)}
+                </p>
+              </div>
+              <div className="text-center sm:text-right">
+                <p className="text-xs sm:text-sm text-gray-500">Total</p>
+                <p className="text-xl sm:text-3xl font-light text-slate-800">
+                  {new Intl.NumberFormat('fr-FR').format(counts.total)}
+                </p>
+              </div>
             </div>
           </div>
         </div>
