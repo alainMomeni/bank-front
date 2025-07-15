@@ -48,7 +48,7 @@ export const PaymentModal = ({ isOpen, onClose, notification, onSubmit }) => {
         style={{ backgroundColor: '#3D769A' }}
       >
         <h2 className="text-xl sm:text-2xl font-semibold">
-          New payment [{notification.transaction_reference}]
+          Nouveau paiement [{notification.transaction_reference}]
         </h2>
         <button 
           onClick={onClose} 
