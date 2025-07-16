@@ -16,7 +16,7 @@ export const Filters = ({
           
           <div className="md:col-span-1">
             <label htmlFor="search" className="block text-sm font-medium text-gray-500 mb-1">
-              Nom à Imprimer
+              Rechercher
             </label>
             <div className="relative">
               <input
@@ -92,28 +92,28 @@ export const Filters = ({
             </div>
           </div>
           
-          <div className="md:col-span-1 flex flex-col w-full mt-6 md:mt-0">
-            <div className="grid grid-cols-3 sm:flex sm:space-x-6 justify-between sm:justify-end">
-              <div className="text-center sm:text-right">
-                <p className="text-xs sm:text-sm text-gray-500">À Traiter</p>
-                <p className="text-xl sm:text-3xl font-light text-orange-500">
-                  {new Intl.NumberFormat('fr-FR').format(counts.toProcess)}
-                </p>
-              </div>
-              <div className="text-center sm:text-right">
-                <p className="text-xs sm:text-sm text-gray-500">Traitées</p>
-                <p className="text-xl sm:text-3xl font-light text-green-500">
-                  {new Intl.NumberFormat('fr-FR').format(counts.processed)}
-                </p>
-              </div>
-              <div className="text-center sm:text-right">
-                <p className="text-xs sm:text-sm text-gray-500">Total</p>
-                <p className="text-xl sm:text-3xl font-light text-slate-800">
-                  {new Intl.NumberFormat('fr-FR').format(counts.total)}
-                </p>
-              </div>
-            </div>
-          </div>
+<div className="md:col-span-1 flex flex-col w-full mt-6 md:mt-0 min-w-0">
+  <div className="grid grid-cols-3 sm:flex sm:space-x-2 md:space-x-4 lg:space-x-6 justify-between sm:justify-end gap-x-1">
+    <div className="text-center sm:text-right min-w-0">
+      <p className="text-xs sm:text-sm md:text-xs lg:text-sm text-gray-500 whitespace-nowrap">À Traiter</p>
+      <p className="text-sm sm:text-xl md:text-lg lg:text-2xl font-light text-orange-500 truncate">
+        {new Intl.NumberFormat('fr-FR').format(counts.toProcess)}
+      </p>
+    </div>
+    <div className="text-center sm:text-right min-w-0">
+      <p className="text-xs sm:text-sm lg:text-sm text-gray-500 whitespace-nowrap">Traitées</p>
+      <p className="text-sm sm:text-xl  lg:text-2xl font-light text-green-500 truncate">
+        {new Intl.NumberFormat('fr-FR').format(counts.processed)}
+      </p>
+    </div>
+    <div className="text-center sm:text-right min-w-0">
+      <p className="text-xs sm:text-sm md:text-xs lg:text-sm text-gray-500 whitespace-nowrap">Total</p>
+      <p className="text-sm sm:text-xl md:text-lg lg:text-2xl font-light text-slate-800 truncate">
+        {new Intl.NumberFormat('fr-FR').format(counts.total)}
+      </p>
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </div>
